@@ -1,0 +1,5 @@
+# Nmap 7.92 scan initiated Sun Jan 23 11:20:50 2022 as: nmap -v -sSV -p 2222,5555,40947,42135,59777 -Pn -T4 -oA nmap-res2 10.129.151.103
+# Ports scanned: TCP(5;2222,5555,40947,42135,59777) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.129.151.103 ()	Status: Up
+Host: 10.129.151.103 ()	Ports: 2222/closed/tcp//EtherNetIP-1///, 5555/closed/tcp//freeciv///, 40947/closed/tcp/////, 42135/closed/tcp/////, 59777/closed/tcp/////
+# Nmap done at Sun Jan 23 11:20:50 2022 -- 1 IP address (1 host up) scanned in 0.36 seconds
