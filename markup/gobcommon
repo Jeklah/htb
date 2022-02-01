@@ -1,80 +1,0 @@
-===============================================================
-Gobuster v3.1.0
-by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
-===============================================================
-[+] Url:                     http://10.129.112.108/
-[+] Method:                  GET
-[+] Threads:                 10
-[+] Wordlist:                /usr/share/dirb/wordlists/common.txt
-[+] Negative Status codes:   404
-[+] User Agent:              gobuster/3.1.0
-[+] Extensions:              html,php
-[+] Timeout:                 10s
-===============================================================
-2022/01/26 17:00:28 Starting gobuster in directory enumeration mode
-===============================================================
-/.hta                 (Status: 403) [Size: 1047]
-/.hta.html            (Status: 403) [Size: 1047]
-/.htaccess            (Status: 403) [Size: 1047]
-/.hta.php             (Status: 403) [Size: 1047]
-/.htaccess.html       (Status: 403) [Size: 1047]
-/.htpasswd            (Status: 403) [Size: 1047]
-/.htaccess.php        (Status: 403) [Size: 1047]
-/.htpasswd.html       (Status: 403) [Size: 1047]
-/.htpasswd.php        (Status: 403) [Size: 1047]
-/About.php            (Status: 302) [Size: 108] [--> /index.php]
-/about.php            (Status: 302) [Size: 108] [--> /index.php]
-/aux                  (Status: 403) [Size: 1047]                
-/aux.html             (Status: 403) [Size: 1047]                
-/aux.php              (Status: 403) [Size: 1047]                
-/cgi-bin/             (Status: 403) [Size: 1061]                
-/cgi-bin/.html        (Status: 403) [Size: 1047]                
-/com1                 (Status: 403) [Size: 1047]                
-/com3                 (Status: 403) [Size: 1047]                
-/com2                 (Status: 403) [Size: 1047]                
-/com1.html            (Status: 403) [Size: 1047]                
-/com3.html            (Status: 403) [Size: 1047]                
-/com2.html            (Status: 403) [Size: 1047]                
-/com1.php             (Status: 403) [Size: 1047]                
-/com2.php             (Status: 403) [Size: 1047]                
-/com3.php             (Status: 403) [Size: 1047]                
-/con.php              (Status: 403) [Size: 1047]                
-/con                  (Status: 403) [Size: 1047]                
-/con.html             (Status: 403) [Size: 1047]                
-/contact.php          (Status: 302) [Size: 110] [--> /index.php]
-/Contact.php          (Status: 302) [Size: 110] [--> /index.php]
-/db.php               (Status: 200) [Size: 0]                   
-/DB.php               (Status: 200) [Size: 0]                   
-/examples             (Status: 503) [Size: 1061]                
-/home.php             (Status: 302) [Size: 107] [--> /index.php]
-/Home.php             (Status: 302) [Size: 107] [--> /index.php]
-/images               (Status: 301) [Size: 342] [--> http://10.129.112.108/images/]
-/Images               (Status: 301) [Size: 342] [--> http://10.129.112.108/Images/]
-/index.php            (Status: 200) [Size: 12100]                                  
-/index.php            (Status: 200) [Size: 12100]                                  
-/Index.php            (Status: 200) [Size: 12100]                                  
-/licenses             (Status: 403) [Size: 1206]                                   
-/lpt1                 (Status: 403) [Size: 1047]                                   
-/lpt2.html            (Status: 403) [Size: 1047]                                   
-/lpt1.html            (Status: 403) [Size: 1047]                                   
-/lpt2.php             (Status: 403) [Size: 1047]                                   
-/lpt1.php             (Status: 403) [Size: 1047]                                   
-/lpt2                 (Status: 403) [Size: 1047]                                   
-/nul                  (Status: 403) [Size: 1047]                                   
-/nul.html             (Status: 403) [Size: 1047]                                   
-/nul.php              (Status: 403) [Size: 1047]                                   
-/phpmyadmin           (Status: 403) [Size: 1206]                                   
-/prn                  (Status: 403) [Size: 1047]                                   
-/prn.html             (Status: 403) [Size: 1047]                                   
-/prn.php              (Status: 403) [Size: 1047]                                   
-/process.php          (Status: 302) [Size: 110] [--> /index.php]                   
-/Products.php         (Status: 302) [Size: 111] [--> /index.php]                   
-/products.php         (Status: 302) [Size: 111] [--> /index.php]                   
-/server-info          (Status: 403) [Size: 1206]                                   
-/server-status        (Status: 403) [Size: 1206]                                   
-/Services.php         (Status: 302) [Size: 111] [--> /index.php]                   
-/services.php         (Status: 302) [Size: 111] [--> /index.php]                   
-/webalizer            (Status: 403) [Size: 1047]                                   
-===============================================================
-2022/01/26 17:01:56 Finished
-===============================================================

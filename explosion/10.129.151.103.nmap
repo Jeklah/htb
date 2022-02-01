@@ -1,5 +1,0 @@
-# Nmap 7.92 scan initiated Sun Jan 23 11:06:01 2022 as: nmap -sC -sV -v -oA 10.129.151.103 nmap-res
-Failed to resolve "nmap-res".
-Read data files from: /usr/bin/../share/nmap
-WARNING: No targets were specified, so 0 hosts scanned.
-# Nmap done at Sun Jan 23 11:06:03 2022 -- 0 IP addresses (0 hosts up) scanned in 2.68 seconds

@@ -1,0 +1,4 @@
+# cleanup after
+date
+touch --date "date time newfile
+find / -newer /tmp/newfile 2>/dev/null | egrep -v "/sys|/proc|/run|/dev"
