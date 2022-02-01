@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Sun Jan 23 11:20:50 2022 as: nmap -v -sSV -p 2222,5555,40947,42135,59777 -Pn -T4 -oA nmap-res2 10.129.151.103 -->
+<nmaprun scanner="nmap" args="nmap -v -sSV -p 2222,5555,40947,42135,59777 -Pn -T4 -oA nmap-res2 10.129.151.103" start="1642954850" startstr="Sun Jan 23 11:20:50 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="5" services="2222,5555,40947,42135,59777"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1642954850"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1642954850"/>
+<taskbegin task="SYN Stealth Scan" time="1642954850"/>
+<taskend task="SYN Stealth Scan" time="1642954850" extrainfo="5 total ports"/>
+<taskbegin task="Service scan" time="1642954850"/>
+<taskbegin task="NSE" time="1642954850"/>
+<taskend task="NSE" time="1642954850"/>
+<taskbegin task="NSE" time="1642954850"/>
+<taskend task="NSE" time="1642954850"/>
+<host starttime="1642954850" endtime="1642954850"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.129.151.103" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="2222"><state state="closed" reason="reset" reason_ttl="127"/><service name="EtherNetIP-1" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5555"><state state="closed" reason="reset" reason_ttl="127"/><service name="freeciv" method="table" conf="3"/></port>
+<port protocol="tcp" portid="40947"><state state="closed" reason="reset" reason_ttl="127"/></port>
+<port protocol="tcp" portid="42135"><state state="closed" reason="reset" reason_ttl="127"/></port>
+<port protocol="tcp" portid="59777"><state state="closed" reason="reset" reason_ttl="127"/></port>
+</ports>
+<times srtt="32322" rttvar="10249" to="100000"/>
+</host>
+<runstats><finished time="1642954850" timestr="Sun Jan 23 11:20:50 2022" summary="Nmap done at Sun Jan 23 11:20:50 2022; 1 IP address (1 host up) scanned in 0.36 seconds" elapsed="0.36" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

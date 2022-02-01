@@ -1,0 +1,1 @@
+put cat file contain /bin/sh in /tmp and it will run as not listed full cat path

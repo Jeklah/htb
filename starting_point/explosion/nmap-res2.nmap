@@ -1,0 +1,14 @@
+# Nmap 7.92 scan initiated Sun Jan 23 11:20:50 2022 as: nmap -v -sSV -p 2222,5555,40947,42135,59777 -Pn -T4 -oA nmap-res2 10.129.151.103
+Nmap scan report for 10.129.151.103
+Host is up (0.032s latency).
+
+PORT      STATE  SERVICE      VERSION
+2222/tcp  closed EtherNetIP-1
+5555/tcp  closed freeciv
+40947/tcp closed unknown
+42135/tcp closed unknown
+59777/tcp closed unknown
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Jan 23 11:20:50 2022 -- 1 IP address (1 host up) scanned in 0.36 seconds

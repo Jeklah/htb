@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Tue Jan 25 09:12:57 2022 as: nmap -sCV -oA included 10.129.95.185
+Host: 10.129.95.185 ()	Status: Up
+Host: 10.129.95.185 ()	Ports: 80/open/tcp//http//Apache httpd 2.4.29 ((Ubuntu))/	Ignored State: closed (999)
+# Nmap done at Tue Jan 25 09:13:04 2022 -- 1 IP address (1 host up) scanned in 7.29 seconds
