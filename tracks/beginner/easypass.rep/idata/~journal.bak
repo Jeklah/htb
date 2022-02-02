@@ -1,0 +1,5 @@
+FADD:/New Traces
+IADD:00000001:/New Traces/Emulate EasyPass.exe
+IDSET:/New Traces/Emulate EasyPass.exe:7f0119e7725514156513317
+IADD:00000002:/EasyPass2.exe
+IDSET:/EasyPass2.exe:7f0119e0b25609308708816
