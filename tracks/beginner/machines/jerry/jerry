@@ -1,9 +1,16 @@
-# Nmap 7.92 scan initiated Wed Feb  2 23:51:22 2022 as: nmap -sCV -A -v -o jerry -Pn 10.10.14.66
-Nmap scan report for 10.10.14.66
-Host is up (0.000078s latency).
-All 1000 scanned ports on 10.10.14.66 are in ignored states.
-Not shown: 1000 closed tcp ports (conn-refused)
+# Nmap 7.92 scan initiated Thu Feb  3 16:52:38 2022 as: nmap -sCV -A -v -Pn -o jerry 10.10.1095
+Nmap scan report for 10.10.1095 (10.10.4.71)
+Host is up (0.00014s latency).
+All 1000 scanned ports on 10.10.1095 (10.10.4.71) are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+OS details: Actiontec MI424WR-GEN3I WAP, DD-WRT v24-sp2 (Linux 2.4.37), Linux 3.2, Linux 4.4, Microsoft Windows XP SP3, Microsoft Windows XP SP3 or Windows 7 or Windows Server 2012, VMware Player virtual NAT device
+
+TRACEROUTE (using proto 1/icmp)
+HOP RTT     ADDRESS
+1   0.52 ms 192.168.71.2
+2   ... 30
 
 Read data files from: /usr/bin/../share/nmap
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Wed Feb  2 23:51:22 2022 -- 1 IP address (1 host up) scanned in 0.34 seconds
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Feb  3 16:56:10 2022 -- 1 IP address (1 host up) scanned in 211.90 seconds
