@@ -1,0 +1,15 @@
+.
+./middleware
+./middleware/AuthMiddleware.js
+./package.json
+./views
+./views/auth.html
+./views/index.html
+./index.js
+./helpers
+./helpers/JWTHelper.js
+./helpers/DBHelper.js
+./Under Construction.zip
+./routes
+./routes/index.js
+./cat
