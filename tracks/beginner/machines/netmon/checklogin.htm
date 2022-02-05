@@ -1,0 +1,17 @@
+﻿<#lang key="html.checklogin.title" default="Checking login" var="pagetitle">
+<#include file="includes\htmlheader.htm" >
+<#include file="includes\pageheader.htm">
+
+<div id="main">
+  <div id="content">
+    <center>
+      <h2><#lang key="html.checklogin.h2" default="Checking your login...."></h2>
+      <p><#lang key="html.checklogin.h2p" default="Your login credentials are being checked... Please stand by..."></p>
+      <#checklogin>
+    </center>
+  </div>
+</div>
+
+<#include file="includes\foreachpageview.htm">
+<#include file="includes\pagefooter.htm">
+<#include file="includes\htmlfooter.htm">

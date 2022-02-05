@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>PRTG-Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="//cdn.auth0.com/w2/auth0-7.0.3.min.js"></script>
+  <!-- <script src="../javascript/_Prtg.ssoLogin.lang.js" defer></script> -->
+  <script src="../javascript/sso.paeAuth.v7.js"></script>
+  <script src="../javascript/sso.login.v7.js" defer></script>
+  
+  
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/sso.login.css">
+
+    
+</head>
+<body>
+  <div class="container">
+    <div id='loginMain' class='out'>
+      <form class="form-signin" role="form" autocomplete="off">
+        <a href='/'><h2 class="form-signup-heading"><img width='100px' src='/images/prtg_logo_gray.png'><br><br></h2></a>
+
+        <div id='social_logins'>
+          <div>
+            <i id='facebook' class="fa fa-facebook fa-3x"></i>
+            <i id='google' class="fa fa-google-plus fa-3x"></i>
+            <i id='github' class="fa fa-github fa-3x"></i>
+            <i id='amazon' class="fa fa-amazon fa-3x"></i>
+          </div>
+          <div id='or'><span>OR</span></div>
+        </div>
+
+        <div class="form-group has-feedback">
+          <label for="inputEmail" class="sr-only">Email</label>
+          <input type="email" id="username" class="form-control scope_resetpw first-input" placeholder="Email" autofocus required>
+          <div class="help-block with-errors"></div>
+        </div>
+
+        <div class="form-group has-feedback">
+          <label for="password" class="sr-only">Password</label>
+          <input type="password" id="password" class="form-control" placeholder="Password" data-minlength="6" required>
+          <div class="help-block with-errors"></div>
+        </div>
+
+        <div class="form-group has-feedback">
+          <label for="password2" class="sr-only">Confirm Password</label>
+          <input type="password" id="password2" class="form-control" placeholder="Password (repeat)" data-minlength="6" data-match='#password' required>
+          <div class="help-block with-errors"></div>
+        </div>
+
+        <div class="form-group">
+          <button class="btn btn-lg btn-success btn-block last-input" type="button" id="btn-login">Sign In</button>
+          <button class="btn btn-lg btn-warning btn-block last-input" type="button" id="btn-register">Sign Up</button>
+        </div>
+        
+        <a id='resetpw' href='#'>Send me a reset password mail</a>
+        <!-- <button id='resetpw' type="button" class="btn btn-link reset-password">Send me a reset password mail</button> -->
+
+        <div id='error' class="alert alert-danger" style='display:none;'></div>
+        <div id='result' class="alert alert-success" style='display:none;'></div>
+
+      </form>
+    </div>
+  </div>
+
+  <div id='popup_click' class="alert alert-danger" role="alert">
+    <i class="fa fa-exclamation-triangle fa-5x" aria-hidden="true"></i>
+    <br>
+    Disable your browser's popup blocker for this site or click <a href='#'>here</a>.
+  </div>
+</body>
+</html>
+

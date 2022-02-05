@@ -1,0 +1,27 @@
+﻿<#session type="resetnewmessagestimestamp">
+<#lang key="html.log.title" default="Log" var="title">
+<#objectproperty name="name" var="objectname">
+<#setpagetitle pagetitle="@objectname @title" varexpand="pagetitle">
+
+<#include file="includes\htmlheader.htm" ajax="exclude">
+<#include file="includes\pageheader.htm" ajax="exclude">
+<#objectproperty name="name" var="logname">
+<#breadcrumbs varexpand="this" this="@title" >
+<div id="main" class="log-main-container" data-title="<#pagetitle>" data-contexthelpshow="<#system type='showhelp'>">
+  <div id="content" class="table-wrapper">
+		<div class="buttonbox normalpage">
+			<#include file="includes\linkpagebutton.htm">
+		</div>
+  	<#include file="/controls/loadlog.htm">
+  </div>
+</div>
+  <#lang key="html.log.help.title" default="Log" var="helptitle">
+
+  <#lang key="html.log.help.text" default="The log shows all historic activity that PRTG has monitored. Click the links in the table to navigate the logfile entries. You can choose additional filters from the <b>Logs</b> submenu.<br><br><a href='/help/logs.htm' target='_blank'><b>Help: Logs</b></a>" var="helptext">
+
+  <#system type='showhelp' var='showhelp'>
+  <#help varexpand="title,text,show,target" title="@helptitle" text="@helptext" show="@showhelp" target="#header_help">
+
+<#include file="includes\foreachpageview.htm">
+<#include file="includes\pagefooter.htm" ajax="exclude">
+<#include file="includes\htmlfooter.htm" ajax="exclude">

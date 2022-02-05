@@ -1,0 +1,40 @@
+﻿<#system type="denyfornonadmins">
+<#lang key="html.you_should_use_ssl.title" default="Switching to SSL" var="pagetitle">
+<#include file="includes\htmlheader.htm" >
+<#include file="includes\pageheader.htm">
+<div id="main" data-title="<#pagetitle>">
+    <div id="head" >
+<b><#lang key="html.you_should_use_ssl.title2" default="PRTG's webserver is now enabling SSL"></b></div>
+  <div id="content">
+
+            <div class="tabs-container">
+            	
+				<h2><#lang key="html.you_should_use_ssl.textaa" default="The web server will be restarted now."></h2>
+				
+				<#lang key="html.you_should_use_ssl.text2b" default="This will take between a few seconds and a few minutes. Afterwards this browser will automatically display the PRTG login screen.">
+				
+				<p><#switchtossl><br></p>
+				
+				<p id="checking"><#lang key="html.you_should_use_ssl.text3a" default="Restarting web server, please wait...  "></p>
+				
+            </div>
+ 
+  </div>
+</div>
+
+<#include file="includes\foreachpageview.htm">
+<#include file="includes\pagefooter.htm">
+<#include file="includes\htmlfooter.htm">
+
+<script type="text/javascript">
+<!--
+
+$(document).ready(function()
+{
+	setTimeout("checkconnection()",500);
+	$("#helpcontainer,#openclosehandle").remove();
+});
+
+
+//-->
+</script>

@@ -1,0 +1,80 @@
+﻿<#system type="denyfornonadmins">
+<#lang key="html.systemsetup.titl2e" default="System Administration" var="pagetitle">
+<#include file="includes\htmlheader.htm"  ajax="exclude">
+<#include file="includes\pageheader.htm" ajax="exclude">
+<#lang key="html.menu.Setup.setup" default="Setup" var="setup">
+<#breadcrumbs trail="<a href='/setup.htm'>@setup</a>" varexpand="this trail" this="@pagetitle" >
+<div id="main" class="systemsetup-main-container" data-title="<#pagetitle>" data-contexthelpshow="<#system type='showhelp'>">
+  <h1><#lang key="html.systemsetup.head2" default="System Administration"></h1>
+    <div class="buttonbox ">
+    <a  href="objecthistory.htm?tabid=" onclick="var tabid = ([2,2,2,2,2,5,6,2,2])[parseInt(_Prtg.Util.getUrlParameters(location.href)['tabid'])]; _Prtg.Hjax.loadLink(this.href+tabid);return false;" data-placement='left' class="objectHistory" title='<#lang key="html.global.History" default="History">'
+        style="<#hidefornonadmins>">
+        <i class='glyph-document-history'></i>
+    </a>
+    <#include file="includes\linkpagebutton.htm">
+    </div>
+  <div id="content">
+
+    <div class="prtg-tabs prtg-plugin" data-plugin="prtg-tabs">
+        <ul class="nav-tabs">
+            <li tabid="1" class="tab-active">
+                <a href="/controls/objectdata.htm?id=810&tabname=setupuserinterface">
+                    <i class="glyph-display"></i>
+                    <span class="text"><#lang key="html.global.systemsetting3a" default="User Interface"/></span>
+                </a>
+            </li>
+            <li tabid="2">
+                <a href="/controls/objectdata.htm?id=810&tabname=setupmonitoring">
+                    <i class="glyph-laptop"></i>
+                    <span class="text"><#lang key="html.global.setupmonitoring" default="Monitoring"/></span>
+                </a>
+            </li>
+            <li tabid="3" style='<#hideforpod>'>
+                <a href="/controls/objectdata.htm?id=810&tabname=setupnotifications">
+                    <i class="glyph-bell-alt"></i>
+                    <span class="text"><#lang key="html.global.notificationdelivery2" default="Notification Delivery"/></span>
+                </a>
+            </li>
+            <li tabid="4">
+                <a href="/controls/objectdata.htm?id=810&tabname=setupcoreprobes">
+                    <i class="glyph-server"></i>
+                    <span class="text"><#lang key="html.global.setupcoreprobes" default="Core &amp; Probes"/></span>
+                </a>
+            </li>
+            <li tabid="5" tab-name="user-acc">
+                <a href="/controls/userlist.htm">
+                    <i class="glyph-id-card-o"></i>
+                    <span class="text"><#lang key="html.users.useraccounts" default="User Accounts"/></span>
+                </a>
+            </li>
+            <li tabid="6" tab-name="user-groups">
+                <a href="/controls/usergroups.htm">
+                    <i class="glyph-users2"></i>
+                    <span class="text"><#lang key="html.users.usergroups" default="User Groups"/></span>
+                </a>
+            </li>
+            <li tabid="7">
+                <a href="/controls/statusadmintools.htm">
+                    <i class="glyph-cog-alt"></i>
+                    <span class="text"><#lang key="html.menu.Setup.admintools2" default="Administrative Tools"/></span>
+                </a>
+            </li>
+            <li tabid="8" style='<#clusterdependent showfor="clusterinstallation">' tab-name="cluster" class="">
+                <a href="/controls/clustersetup.htm?tabname=setupcluster">
+                    <i class="glyph-cluster"></i>
+                    <span class="text"><#lang key="html.global.clusteroptions2" default="Cluster"/></span>
+                </a>
+            </li>
+        </ul>
+        <div class="tab-container"></div>
+    </div>
+  </div>
+
+<#lang key="html.systemsetup.help.title" default="System Administration" var="helptitle">
+<#lang key="html.systemsetup.help.text" default="Here you can start system-specific processes for debugging purposes. Please use these settings if our technical support advises you to do so. You can create status files of your PRTG core server or restart it manually. You can also recalculate the PRTG graph data cache, for example, if you are experiencing graph display problems." var="helptext">
+<#system type='showhelp' var='showhelp'>
+<#help varexpand="title,text,show,target" title="@helptitle" text="@helptext" show="@showhelp" target="#header_help">
+</div>
+<#include file="includes\foreachpageview.htm">
+<#include file="includes\pagefooter.htm" ajax="exclude">
+<#include file="includes\htmlfooter.htm" ajax="exclude">

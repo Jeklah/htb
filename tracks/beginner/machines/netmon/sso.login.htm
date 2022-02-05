@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>PRTG-Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="//cdn.auth0.com/w2/auth0-7.6.1.min.js"></script>
+  <script src="//cdn.auth0.com/js/auth0/8.0.4/auth0.min.js"></script>
+  <script src="../javascript/sso.paeAuth.js"></script>
+  <script src="../javascript/sso.login.js" defer></script>
+  
+  
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/sso.login.css">
+
+    
+</head>
+<body>
+  <div id="header">
+    <span class="prtglogo">
+      <img border=0 id="prtgname" src="/images/prtg_network_monitor.png">
+    </span>
+    <span class="paesslerlogo">
+      <a tabindex="-1" href="https://www.paessler.com" target="_blank" title="Paessler AG - The Network Monitoring Company"><img border=0 id="paesslerlogo" src="/images/paessler.png"></a>
+    </span>
+  </div>
+  <div class="container">
+    <div class='row'>
+    <div class='col-lg-6 col-md-6'>
+        <div id='loader'><div class="cssload-loading"><i></i><i></i><i></i></div></div>
+        <form id='loginMain' class="form-signin" role="form" autocomplete="off">
+          <a class="form-signup-heading" href='/'><img height="85" src='/images/paessler-logo.png'></a>
+
+          <div id='social_logins'>
+            <div>
+              <i tabindex='100' id='google' class="fa fa-google-plus fa-3x"></i>
+              <i tabindex='101' id='facebook' class="fa fa-facebook fa-3x"></i>
+              <i tabindex='102' id='windows' class="fa fa-windows fa-3x"></i>
+              <i tabindex='103' id='amazon' class="fa fa-amazon fa-3x"></i>
+            </div>
+            <div id='or'><span>OR</span></div>
+          </div>
+
+          <div class="form-group has-feedback">
+            <label for="inputEmail" class="sr-only">Email</label>
+            <input tabindex='1' type="email" id="username" class="form-control scope_resetpw first-input" placeholder="Email" autofocus required>
+            <div class="help-block with-errors"></div>
+          </div>
+
+          <div class="form-group has-feedback">
+            <label for="password" class="sr-only">Password</label>
+            <span>
+            <input tabindex='2' type="password" id="password" class="form-control" placeholder="Password" data-minlength="6" required>
+            <i class="showpass fa fa-eye" aria-hidden="true" data-show='false'></i>
+            </span>
+            <div class="help-block with-errors"></div>
+          </div>
+
+          <div class="form-group has-feedback">
+            <label for="password2" class="sr-only">Confirm Password</label>
+            <input  tabindex='3' type="password" id="password2" class="form-control" placeholder="Password (repeat)" data-minlength="6" data-match='#password' required>
+            <div class="help-block with-errors"></div>
+          </div>
+
+          <div class="form-group">
+            <button tabindex='4' class="btn btn-lg btn-success btn-block last-input" type="button" id="btn-login">Login</button>
+            <button tabindex='5' class="btn btn-lg btn-warning btn-block last-input" type="button" id="btn-register">Register</button>
+          </div>
+          
+          <a tabindex='6' id='resetpw' href='#'>Change/reset password</a>
+          <!-- <button id='resetpw' type="button" class="btn btn-link reset-password">Send me a reset password mail</button> -->
+
+          <div id='output'></div>
+
+        </form>
+      </div>
+      
+      <div class='adds col-lg-6 col-md-6'>
+        <img class="prtg-logo-big" width="200" height="120" src="/images/prtg_logo_gray.png" />
+        <#include file="public\newsfeed.htm">
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <span class="prtgversion">&nbsp;<#system type="codename"> <#system type="version"> <#system type="expiry"></span>
+    <span class="copyright">&copy; <#copyrightyear> <a tabindex="-1" href="https://www.paessler.com?utm_source=prtg&utm_medium=referral&utm_campaign=webgui-homepage" target="_blank" title="The Network Monitoring Company">Paessler AG</a></span>
+  </div>
+</body>
+</html>
+

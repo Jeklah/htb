@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="https://cdn.auth0.com/js/auth0/8.0.4/auth0.min.js"></script>
+    <script type="text/javascript">
+    var thisParent = parent;
+      $.getJSON('/api/public/auth0.htm').done(function(auth0data){
+        var webAuth = new auth0.WebAuth({
+          domain: auth0data.domain,
+          clientID: auth0data.id,
+        });
+        var result = webAuth.parseHash(window.location.hash, function(err, data) {
+          thisParent.postMessage(err || data, location.protocol+'//'+location.host+'/public/v8_login.htm');
+        });
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
