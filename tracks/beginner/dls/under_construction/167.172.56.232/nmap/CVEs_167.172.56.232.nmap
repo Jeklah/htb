@@ -1,0 +1,687 @@
+# Nmap 7.92 scan initiated Sat Feb  5 19:58:30 2022 as: nmap -Pn -sV --script vulners --script-args mincvss=7.0 -p31337,30037,30044,30087,30137,30138,30161,30193,30271,30285,30335,30508,30685,30762,30910,31009,31104,31129,31168,31328,31493,31498,31612,31714,31747,32014,32110,32133,32264,32493,32560,32658,32697,32765,41183, -oN nmap/CVEs_167.172.56.232.nmap 167.172.56.232
+Nmap scan report for 167.172.56.232
+Host is up (0.030s latency).
+
+PORT      STATE SERVICE    VERSION
+30037/tcp open  http       nginx
+30044/tcp open  unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
+|     Welcome to your BatComputer, Batman. What would you like to do?
+|     Track Joker
+|     Chase Joker
+|     bad, now who's gonna save Gotham? Alfred?
+|   GenericLines, NULL: 
+|     Welcome to your BatComputer, Batman. What would you like to do?
+|     Track Joker
+|_    Chase Joker
+30087/tcp open  http       Apache httpd 2.4.41 ((Ubuntu))
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+| vulners: 
+|   cpe:/a:apache:http_server:2.4.41: 
+|     	MSF:ILITIES/UBUNTU-CVE-2020-11984/	7.5	https://vulners.com/metasploit/MSF:ILITIES/UBUNTU-CVE-2020-11984/	*EXPLOIT*
+|     	MSF:ILITIES/REDHAT_LINUX-CVE-2020-11984/	7.5	https://vulners.com/metasploit/MSF:ILITIES/REDHAT_LINUX-CVE-2020-11984/	*EXPLOIT*
+|     	MSF:ILITIES/ORACLE_LINUX-CVE-2020-11984/	7.5	https://vulners.com/metasploit/MSF:ILITIES/ORACLE_LINUX-CVE-2020-11984/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-11984/	7.5	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-11984/	*EXPLOIT*
+|     	MSF:ILITIES/FREEBSD-CVE-2020-11984/	7.5	https://vulners.com/metasploit/MSF:ILITIES/FREEBSD-CVE-2020-11984/	*EXPLOIT*
+|     	MSF:ILITIES/APACHE-HTTPD-CVE-2020-11984/	7.5	https://vulners.com/metasploit/MSF:ILITIES/APACHE-HTTPD-CVE-2020-11984/	*EXPLOIT*
+|     	CVE-2021-44790	7.5	https://vulners.com/cve/CVE-2021-44790
+|     	CVE-2021-39275	7.5	https://vulners.com/cve/CVE-2021-39275
+|     	CVE-2021-26691	7.5	https://vulners.com/cve/CVE-2021-26691
+|     	CVE-2020-11984	7.5	https://vulners.com/cve/CVE-2020-11984
+|     	1337DAY-ID-34882	7.5	https://vulners.com/zdt/1337DAY-ID-34882	*EXPLOIT*
+|     	FDF3DFA1-ED74-5EE2-BF5C-BA752CA34AE8	6.8	https://vulners.com/githubexploit/FDF3DFA1-ED74-5EE2-BF5C-BA752CA34AE8	*EXPLOIT*
+|     	4810E2D9-AC5F-5B08-BFB3-DDAFA2F63332	6.8	https://vulners.com/githubexploit/4810E2D9-AC5F-5B08-BFB3-DDAFA2F63332	*EXPLOIT*
+|     	MSF:ILITIES/REDHAT_LINUX-CVE-2020-9490/	5.0	https://vulners.com/metasploit/MSF:ILITIES/REDHAT_LINUX-CVE-2020-9490/	*EXPLOIT*
+|     	MSF:ILITIES/ORACLE_LINUX-CVE-2020-9490/	5.0	https://vulners.com/metasploit/MSF:ILITIES/ORACLE_LINUX-CVE-2020-9490/	*EXPLOIT*
+|     	MSF:ILITIES/ORACLE-SOLARIS-CVE-2020-1934/	5.0	https://vulners.com/metasploit/MSF:ILITIES/ORACLE-SOLARIS-CVE-2020-1934/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-9490/	5.0	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-9490/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-9490/	5.0	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-9490/	*EXPLOIT*
+|     	MSF:ILITIES/FREEBSD-CVE-2020-9490/	5.0	https://vulners.com/metasploit/MSF:ILITIES/FREEBSD-CVE-2020-9490/	*EXPLOIT*
+|     	MSF:ILITIES/CENTOS_LINUX-CVE-2020-9490/	5.0	https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2020-9490/	*EXPLOIT*
+|     	MSF:ILITIES/APACHE-HTTPD-CVE-2020-9490/	5.0	https://vulners.com/metasploit/MSF:ILITIES/APACHE-HTTPD-CVE-2020-9490/	*EXPLOIT*
+|     	MSF:ILITIES/AMAZON-LINUX-AMI-2-CVE-2020-9490/	5.0	https://vulners.com/metasploit/MSF:ILITIES/AMAZON-LINUX-AMI-2-CVE-2020-9490/	*EXPLOIT*
+|     	MSF:ILITIES/REDHAT_LINUX-CVE-2020-11993/	4.3	https://vulners.com/metasploit/MSF:ILITIES/REDHAT_LINUX-CVE-2020-11993/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-11993/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-11993/	*EXPLOIT*
+|     	MSF:ILITIES/CENTOS_LINUX-CVE-2020-11993/	4.3	https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2020-11993/	*EXPLOIT*
+|     	MSF:ILITIES/APACHE-HTTPD-CVE-2020-11993/	4.3	https://vulners.com/metasploit/MSF:ILITIES/APACHE-HTTPD-CVE-2020-11993/	*EXPLOIT*
+|     	MSF:ILITIES/AMAZON-LINUX-AMI-2-CVE-2020-11993/	4.3	https://vulners.com/metasploit/MSF:ILITIES/AMAZON-LINUX-AMI-2-CVE-2020-11993/	*EXPLOIT*
+|     	1337DAY-ID-35422	4.3	https://vulners.com/zdt/1337DAY-ID-35422	*EXPLOIT*
+|_    	MSF:EXPLOIT/UNIX/WEBAPP/JOOMLA_MEDIA_UPLOAD_EXEC/	0.0	https://vulners.com/metasploit/MSF:EXPLOIT/UNIX/WEBAPP/JOOMLA_MEDIA_UPLOAD_EXEC/	*EXPLOIT*
+30137/tcp open  http       Node.js Express framework
+30138/tcp open  unknown
+| fingerprint-strings: 
+|   NULL: 
+|     [1;31m ______ 
+|     [1;35m|xxx|
+|     [1;31m /|_||_`.__ 
+|     [1;35m| F |
+|     [1;31m ( _ _ _\x20 
+|     [1;35m|xxx|
+|     [1;31m*** =`-(_)--(_)-' 
+|     [1;35m| I |
+|     [1;35m|xxx|
+|     [1;35m| N |
+|     [1;35m|xxx|
+|     [1;35m| I |
+|     [1;35m|xxx|
+|     [1;33m _-_- _/________ 
+|     [1;35m| S |
+|     [1;33m _-_-__ / ,-. -|- ,-.`-. 
+|     [1;35m|xxx|
+|_    [1;33m _-_- `( o )----( o )-
+30161/tcp open  http       nginx 1.19.2
+|_http-server-header: nginx/1.19.2
+30193/tcp open  http       Werkzeug httpd 2.0.1 (Python 3.9.5)
+30271/tcp open  unknown
+| fingerprint-strings: 
+|   NULL: 
+|     [1;31m ______ 
+|     [1;35m|xxx|
+|     [1;31m /|_||_`.__ 
+|     [1;35m| F |
+|     [1;31m ( _ _ _\x20 
+|     [1;35m|xxx|
+|     [1;31m*** =`-(_)--(_)-' 
+|     [1;35m| I |
+|     [1;35m|xxx|
+|     [1;35m| N |
+|     [1;35m|xxx|
+|     [1;35m| I |
+|     [1;35m|xxx|
+|     [1;33m _-_- _/________ 
+|     [1;35m| S |
+|     [1;33m _-_-__ / ,-. -|- ,-.`-. 
+|     [1;35m|xxx|
+|_    [1;33m _-_- `( o )----( o )-
+30285/tcp open  http       nginx 1.19.2
+|_http-server-header: nginx/1.19.2
+30335/tcp open  http       nginx 1.19.2
+|_http-server-header: nginx/1.19.2
+30508/tcp open  unknown
+| fingerprint-strings: 
+|   NULL: 
+|     [1;31m ______ 
+|     [1;35m|xxx|
+|     [1;31m /|_||_`.__ 
+|     [1;35m| F |
+|     [1;31m ( _ _ _\x20 
+|     [1;35m|xxx|
+|     [1;31m*** =`-(_)--(_)-' 
+|     [1;35m| I |
+|     [1;35m|xxx|
+|     [1;35m| N |
+|     [1;35m|xxx|
+|     [1;35m| I |
+|     [1;35m|xxx|
+|     [1;33m _-_- _/________ 
+|     [1;35m| S |
+|     [1;33m _-_-__ / ,-. -|- ,-.`-. 
+|     [1;35m|xxx|
+|_    [1;33m _-_- `( o )----( o )-
+30685/tcp open  http       nginx
+30762/tcp open  mysql      MySQL 5.5.5-10.5.9-MariaDB-1:10.5.9+maria~focal
+30910/tcp open  http       Node.js Express framework
+31009/tcp open  unknown
+| fingerprint-strings: 
+|   NULL: 
+|     [1;31m ______ 
+|     [1;35m|xxx|
+|     [1;31m /|_||_`.__ 
+|     [1;35m| F |
+|     [1;31m ( _ _ _\x20 
+|     [1;35m|xxx|
+|     [1;31m*** =`-(_)--(_)-' 
+|     [1;35m| I |
+|     [1;35m|xxx|
+|     [1;35m| N |
+|     [1;35m|xxx|
+|     [1;35m| I |
+|     [1;35m|xxx|
+|     [1;33m _-_- _/________ 
+|     [1;35m| S |
+|     [1;33m _-_-__ / ,-. -|- ,-.`-. 
+|     [1;35m|xxx|
+|_    [1;33m _-_- `( o )----( o )-
+31104/tcp open  http       nginx 1.19.2
+|_http-server-header: nginx/1.19.2
+31129/tcp open  ssh        OpenSSH 8.2p1 Ubuntu 4ubuntu0.1 (Ubuntu Linux; protocol 2.0)
+| vulners: 
+|   cpe:/a:openbsd:openssh:8.2p1: 
+|     	C94132FD-1FA5-5342-B6EE-0DAF45EEFFE3	6.8	https://vulners.com/githubexploit/C94132FD-1FA5-5342-B6EE-0DAF45EEFFE3	*EXPLOIT*
+|     	10213DBE-F683-58BB-B6D3-353173626207	6.8	https://vulners.com/githubexploit/10213DBE-F683-58BB-B6D3-353173626207	*EXPLOIT*
+|     	MSF:ILITIES/GENTOO-LINUX-CVE-2021-28041/	4.6	https://vulners.com/metasploit/MSF:ILITIES/GENTOO-LINUX-CVE-2021-28041/	*EXPLOIT*
+|     	MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/	*EXPLOIT*
+|_    	MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/	*EXPLOIT*
+31168/tcp open  http       Werkzeug httpd 1.0.0 (Python 2.7.17)
+|_http-server-header: Werkzeug/1.0.0 Python/2.7.17
+| vulners: 
+|   cpe:/a:python:python:2.7.17: 
+|     	CVE-2020-8492	7.1	https://vulners.com/cve/CVE-2020-8492
+|_    	MSF:ILITIES/DEBIAN-CVE-2021-3426/	2.7	https://vulners.com/metasploit/MSF:ILITIES/DEBIAN-CVE-2021-3426/	*EXPLOIT*
+31328/tcp open  http       nginx 1.19.2
+|_http-server-header: nginx/1.19.2
+31337/tcp open  http       nginx 1.19.2
+|_http-server-header: nginx/1.19.2
+31493/tcp open  http       Apache httpd 2.4.46 ((Unix))
+|_http-server-header: Apache/2.4.46 (Unix)
+| vulners: 
+|   cpe:/a:apache:http_server:2.4.46: 
+|     	CVE-2021-44790	7.5	https://vulners.com/cve/CVE-2021-44790
+|     	CVE-2021-39275	7.5	https://vulners.com/cve/CVE-2021-39275
+|     	CVE-2021-26691	7.5	https://vulners.com/cve/CVE-2021-26691
+|     	FDF3DFA1-ED74-5EE2-BF5C-BA752CA34AE8	6.8	https://vulners.com/githubexploit/FDF3DFA1-ED74-5EE2-BF5C-BA752CA34AE8	*EXPLOIT*
+|     	4810E2D9-AC5F-5B08-BFB3-DDAFA2F63332	6.8	https://vulners.com/githubexploit/4810E2D9-AC5F-5B08-BFB3-DDAFA2F63332	*EXPLOIT*
+|_    	MSF:EXPLOIT/UNIX/WEBAPP/JOOMLA_MEDIA_UPLOAD_EXEC/	0.0	https://vulners.com/metasploit/MSF:EXPLOIT/UNIX/WEBAPP/JOOMLA_MEDIA_UPLOAD_EXEC/	*EXPLOIT*
+31498/tcp open  http       Apache httpd 2.4.41 ((Ubuntu))
+| vulners: 
+|   cpe:/a:apache:http_server:2.4.41: 
+|     	MSF:ILITIES/UBUNTU-CVE-2020-11984/	7.5	https://vulners.com/metasploit/MSF:ILITIES/UBUNTU-CVE-2020-11984/	*EXPLOIT*
+|     	MSF:ILITIES/REDHAT_LINUX-CVE-2020-11984/	7.5	https://vulners.com/metasploit/MSF:ILITIES/REDHAT_LINUX-CVE-2020-11984/	*EXPLOIT*
+|     	MSF:ILITIES/ORACLE_LINUX-CVE-2020-11984/	7.5	https://vulners.com/metasploit/MSF:ILITIES/ORACLE_LINUX-CVE-2020-11984/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-11984/	7.5	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-11984/	*EXPLOIT*
+|     	MSF:ILITIES/FREEBSD-CVE-2020-11984/	7.5	https://vulners.com/metasploit/MSF:ILITIES/FREEBSD-CVE-2020-11984/	*EXPLOIT*
+|     	MSF:ILITIES/APACHE-HTTPD-CVE-2020-11984/	7.5	https://vulners.com/metasploit/MSF:ILITIES/APACHE-HTTPD-CVE-2020-11984/	*EXPLOIT*
+|     	CVE-2021-44790	7.5	https://vulners.com/cve/CVE-2021-44790
+|     	CVE-2021-39275	7.5	https://vulners.com/cve/CVE-2021-39275
+|     	CVE-2021-26691	7.5	https://vulners.com/cve/CVE-2021-26691
+|     	CVE-2020-11984	7.5	https://vulners.com/cve/CVE-2020-11984
+|     	1337DAY-ID-34882	7.5	https://vulners.com/zdt/1337DAY-ID-34882	*EXPLOIT*
+|     	FDF3DFA1-ED74-5EE2-BF5C-BA752CA34AE8	6.8	https://vulners.com/githubexploit/FDF3DFA1-ED74-5EE2-BF5C-BA752CA34AE8	*EXPLOIT*
+|     	4810E2D9-AC5F-5B08-BFB3-DDAFA2F63332	6.8	https://vulners.com/githubexploit/4810E2D9-AC5F-5B08-BFB3-DDAFA2F63332	*EXPLOIT*
+|     	MSF:ILITIES/REDHAT_LINUX-CVE-2020-9490/	5.0	https://vulners.com/metasploit/MSF:ILITIES/REDHAT_LINUX-CVE-2020-9490/	*EXPLOIT*
+|     	MSF:ILITIES/ORACLE_LINUX-CVE-2020-9490/	5.0	https://vulners.com/metasploit/MSF:ILITIES/ORACLE_LINUX-CVE-2020-9490/	*EXPLOIT*
+|     	MSF:ILITIES/ORACLE-SOLARIS-CVE-2020-1934/	5.0	https://vulners.com/metasploit/MSF:ILITIES/ORACLE-SOLARIS-CVE-2020-1934/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-9490/	5.0	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-9490/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-9490/	5.0	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-9490/	*EXPLOIT*
+|     	MSF:ILITIES/FREEBSD-CVE-2020-9490/	5.0	https://vulners.com/metasploit/MSF:ILITIES/FREEBSD-CVE-2020-9490/	*EXPLOIT*
+|     	MSF:ILITIES/CENTOS_LINUX-CVE-2020-9490/	5.0	https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2020-9490/	*EXPLOIT*
+|     	MSF:ILITIES/APACHE-HTTPD-CVE-2020-9490/	5.0	https://vulners.com/metasploit/MSF:ILITIES/APACHE-HTTPD-CVE-2020-9490/	*EXPLOIT*
+|     	MSF:ILITIES/AMAZON-LINUX-AMI-2-CVE-2020-9490/	5.0	https://vulners.com/metasploit/MSF:ILITIES/AMAZON-LINUX-AMI-2-CVE-2020-9490/	*EXPLOIT*
+|     	MSF:ILITIES/REDHAT_LINUX-CVE-2020-11993/	4.3	https://vulners.com/metasploit/MSF:ILITIES/REDHAT_LINUX-CVE-2020-11993/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-11993/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-11993/	*EXPLOIT*
+|     	MSF:ILITIES/CENTOS_LINUX-CVE-2020-11993/	4.3	https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2020-11993/	*EXPLOIT*
+|     	MSF:ILITIES/APACHE-HTTPD-CVE-2020-11993/	4.3	https://vulners.com/metasploit/MSF:ILITIES/APACHE-HTTPD-CVE-2020-11993/	*EXPLOIT*
+|     	MSF:ILITIES/AMAZON-LINUX-AMI-2-CVE-2020-11993/	4.3	https://vulners.com/metasploit/MSF:ILITIES/AMAZON-LINUX-AMI-2-CVE-2020-11993/	*EXPLOIT*
+|     	1337DAY-ID-35422	4.3	https://vulners.com/zdt/1337DAY-ID-35422	*EXPLOIT*
+|_    	MSF:EXPLOIT/UNIX/WEBAPP/JOOMLA_MEDIA_UPLOAD_EXEC/	0.0	https://vulners.com/metasploit/MSF:EXPLOIT/UNIX/WEBAPP/JOOMLA_MEDIA_UPLOAD_EXEC/	*EXPLOIT*
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+31612/tcp open  http       nginx 1.19.2
+|_http-server-header: nginx/1.19.2
+31714/tcp open  http       Node.js Express framework
+31747/tcp open  telnet     BusyBox telnetd
+32014/tcp open  http       Apache httpd 2.4.46 ((Unix))
+|_http-server-header: Apache/2.4.46 (Unix)
+| vulners: 
+|   cpe:/a:apache:http_server:2.4.46: 
+|     	CVE-2021-44790	7.5	https://vulners.com/cve/CVE-2021-44790
+|     	CVE-2021-39275	7.5	https://vulners.com/cve/CVE-2021-39275
+|     	CVE-2021-26691	7.5	https://vulners.com/cve/CVE-2021-26691
+|     	FDF3DFA1-ED74-5EE2-BF5C-BA752CA34AE8	6.8	https://vulners.com/githubexploit/FDF3DFA1-ED74-5EE2-BF5C-BA752CA34AE8	*EXPLOIT*
+|     	4810E2D9-AC5F-5B08-BFB3-DDAFA2F63332	6.8	https://vulners.com/githubexploit/4810E2D9-AC5F-5B08-BFB3-DDAFA2F63332	*EXPLOIT*
+|_    	MSF:EXPLOIT/UNIX/WEBAPP/JOOMLA_MEDIA_UPLOAD_EXEC/	0.0	https://vulners.com/metasploit/MSF:EXPLOIT/UNIX/WEBAPP/JOOMLA_MEDIA_UPLOAD_EXEC/	*EXPLOIT*
+32110/tcp open  unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, afp: 
+|     username: 
+|     password:
+|   DNSVersionBindReqTCP: 
+|     username: 
+|     version
+|     bind
+|     password:
+|   FourOhFourRequest: 
+|     username: GET /nice%20ports%2C/Tri%6Eity.txt%2ebak HTTP/1.0's password:
+|   GenericLines: 
+|     username: 's password:
+|   GetRequest: 
+|     username: GET / HTTP/1.0's password:
+|   HTTPOptions: 
+|     username: OPTIONS / HTTP/1.0's password:
+|   Help: 
+|     username: HELP's password:
+|   JavaRMI: 
+|     username: JRMI
+|     password:
+|   Kerberos, LDAPBindReq, LDAPSearchReq, NCP, NULL, RPCCheck, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServer, TerminalServerCookie, WMSRequest, ms-sql-s, oracle-tns: 
+|     username:
+|   LANDesk-RC: 
+|     username: TNMP
+|     TNME
+|     password:
+|   LPDString: 
+|     username: 
+|     default's password:
+|   NotesRPC: 
+|     username: :
+|     password:
+|   RTSPRequest: 
+|     username: OPTIONS / RTSP/1.0's password:
+|   SIPOptions: 
+|     username: OPTIONS sip:nm SIP/2.0
+|     Via: SIP/2.0/TCP nm;branch=foo
+|     From: <sip:nm@nm>;tag=root
+|     <sip:nm2@nm2>
+|     Call-ID: 50000
+|     CSeq: 42 OPTIONS
+|     Max-Forwards: 70
+|     Content-Length: 0
+|     Contact: <sip:nm@nm>
+|     Accept: application/sdp's password:
+|   X11Probe: 
+|     username: l
+|     password:
+|   giop: 
+|     username: GIOP
+|     abcdef
+|_    password:
+32133/tcp open  mysql      MySQL 5.5.5-10.5.9-MariaDB-1:10.5.9+maria~focal
+32264/tcp open  unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, NULL, RPCCheck: 
+|     [1]: Get encrypted flag
+|     [2]: Encrypt your own message
+|   GenericLines, GetRequest, HTTPOptions, RTSPRequest: 
+|     [1]: Get encrypted flag
+|     [2]: Encrypt your own message
+|     Invalid menu item
+|     [1]: Get encrypted flag
+|     [2]: Encrypt your own message
+|     Invalid menu item
+|     [1]: Get encrypted flag
+|     [2]: Encrypt your own message
+|   Help, SSLSessionReq: 
+|     [1]: Get encrypted flag
+|     [2]: Encrypt your own message
+|     Invalid menu item
+|     [1]: Get encrypted flag
+|_    [2]: Encrypt your own message
+32493/tcp open  http       nginx 1.19.2
+32560/tcp open  unknown
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, NULL, RPCCheck: 
+|     Welcome to HTB!
+|     Please enter your name:
+|   GenericLines: 
+|     Welcome to HTB!
+|     Please enter your name: Hello, 
+|     Sorry! You aren't 1337 enough :(
+|     Please come back later
+|     ------------------------
+|     Welcome to HTB!
+|     Please enter your name: Hello, 
+|     Sorry! You aren't 1337 enough :(
+|     Please come back later
+|     ------------------------
+|     Welcome to HTB!
+|     Please enter your name:
+|   GetRequest: 
+|     Welcome to HTB!
+|     Please enter your name: Hello, GET / HTTP/1.0
+|     Sorry! You aren't 1337 enough :(
+|     Please come back later
+|     ------------------------
+|     Welcome to HTB!
+|     Please enter your name: Hello, 
+|     Sorry! You aren't 1337 enough :(
+|     Please come back later
+|     ------------------------
+|     Welcome to HTB!
+|     Please enter your name:
+|   HTTPOptions: 
+|     Welcome to HTB!
+|     Please enter your name: Hello, OPTIONS / HTTP/1.0
+|     Sorry! You aren't 1337 enough :(
+|     Please come back later
+|     ------------------------
+|     Welcome to HTB!
+|     Please enter your name: Hello, 
+|     Sorry! You aren't 1337 enough :(
+|     Please come back later
+|     ------------------------
+|     Welcome to HTB!
+|     Please enter your name:
+|   RTSPRequest: 
+|     Welcome to HTB!
+|     Please enter your name: Hello, OPTIONS / RTSP/1.0
+|     Sorry! You aren't 1337 enough :(
+|     Please come back later
+|     ------------------------
+|     Welcome to HTB!
+|     Please enter your name: Hello, 
+|     Sorry! You aren't 1337 enough :(
+|     Please come back later
+|     ------------------------
+|     Welcome to HTB!
+|_    Please enter your name:
+32658/tcp open  http       nginx 1.19.2
+|_http-server-header: nginx/1.19.2
+32697/tcp open  http       Node.js Express framework
+32765/tcp open  ssh        OpenSSH 8.2p1 Ubuntu 4ubuntu0.1 (Ubuntu Linux; protocol 2.0)
+| vulners: 
+|   cpe:/a:openbsd:openssh:8.2p1: 
+|     	C94132FD-1FA5-5342-B6EE-0DAF45EEFFE3	6.8	https://vulners.com/githubexploit/C94132FD-1FA5-5342-B6EE-0DAF45EEFFE3	*EXPLOIT*
+|     	10213DBE-F683-58BB-B6D3-353173626207	6.8	https://vulners.com/githubexploit/10213DBE-F683-58BB-B6D3-353173626207	*EXPLOIT*
+|     	MSF:ILITIES/GENTOO-LINUX-CVE-2021-28041/	4.6	https://vulners.com/metasploit/MSF:ILITIES/GENTOO-LINUX-CVE-2021-28041/	*EXPLOIT*
+|     	MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/	*EXPLOIT*
+|_    	MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/	*EXPLOIT*
+41183/tcp open  tcpwrapped
+8 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port30044-TCP:V=7.92%I=7%D=2/5%Time=61FED6ED%P=x86_64-pc-linux-gnu%r(NU
+SF:LL,60,"Welcome\x20to\x20your\x20BatComputer,\x20Batman\.\x20What\x20wou
+SF:ld\x20you\x20like\x20to\x20do\?\n1\.\x20Track\x20Joker\n2\.\x20Chase\x2
+SF:0Joker\n>\x20")%r(GenericLines,60,"Welcome\x20to\x20your\x20BatComputer
+SF:,\x20Batman\.\x20What\x20would\x20you\x20like\x20to\x20do\?\n1\.\x20Tra
+SF:ck\x20Joker\n2\.\x20Chase\x20Joker\n>\x20")%r(GetRequest,8E,"Welcome\x2
+SF:0to\x20your\x20BatComputer,\x20Batman\.\x20What\x20would\x20you\x20like
+SF:\x20to\x20do\?\n1\.\x20Track\x20Joker\n2\.\x20Chase\x20Joker\n>\x20Too\
+SF:x20bad,\x20now\x20who's\x20gonna\x20save\x20Gotham\?\x20Alfred\?\n")%r(
+SF:HTTPOptions,8E,"Welcome\x20to\x20your\x20BatComputer,\x20Batman\.\x20Wh
+SF:at\x20would\x20you\x20like\x20to\x20do\?\n1\.\x20Track\x20Joker\n2\.\x2
+SF:0Chase\x20Joker\n>\x20Too\x20bad,\x20now\x20who's\x20gonna\x20save\x20G
+SF:otham\?\x20Alfred\?\n")%r(RTSPRequest,8E,"Welcome\x20to\x20your\x20BatC
+SF:omputer,\x20Batman\.\x20What\x20would\x20you\x20like\x20to\x20do\?\n1\.
+SF:\x20Track\x20Joker\n2\.\x20Chase\x20Joker\n>\x20Too\x20bad,\x20now\x20w
+SF:ho's\x20gonna\x20save\x20Gotham\?\x20Alfred\?\n")%r(RPCCheck,8E,"Welcom
+SF:e\x20to\x20your\x20BatComputer,\x20Batman\.\x20What\x20would\x20you\x20
+SF:like\x20to\x20do\?\n1\.\x20Track\x20Joker\n2\.\x20Chase\x20Joker\n>\x20
+SF:Too\x20bad,\x20now\x20who's\x20gonna\x20save\x20Gotham\?\x20Alfred\?\n"
+SF:)%r(DNSVersionBindReqTCP,8E,"Welcome\x20to\x20your\x20BatComputer,\x20B
+SF:atman\.\x20What\x20would\x20you\x20like\x20to\x20do\?\n1\.\x20Track\x20
+SF:Joker\n2\.\x20Chase\x20Joker\n>\x20Too\x20bad,\x20now\x20who's\x20gonna
+SF:\x20save\x20Gotham\?\x20Alfred\?\n")%r(DNSStatusRequestTCP,8E,"Welcome\
+SF:x20to\x20your\x20BatComputer,\x20Batman\.\x20What\x20would\x20you\x20li
+SF:ke\x20to\x20do\?\n1\.\x20Track\x20Joker\n2\.\x20Chase\x20Joker\n>\x20To
+SF:o\x20bad,\x20now\x20who's\x20gonna\x20save\x20Gotham\?\x20Alfred\?\n")%
+SF:r(Help,8E,"Welcome\x20to\x20your\x20BatComputer,\x20Batman\.\x20What\x2
+SF:0would\x20you\x20like\x20to\x20do\?\n1\.\x20Track\x20Joker\n2\.\x20Chas
+SF:e\x20Joker\n>\x20Too\x20bad,\x20now\x20who's\x20gonna\x20save\x20Gotham
+SF:\?\x20Alfred\?\n")%r(SSLSessionReq,8E,"Welcome\x20to\x20your\x20BatComp
+SF:uter,\x20Batman\.\x20What\x20would\x20you\x20like\x20to\x20do\?\n1\.\x2
+SF:0Track\x20Joker\n2\.\x20Chase\x20Joker\n>\x20Too\x20bad,\x20now\x20who'
+SF:s\x20gonna\x20save\x20Gotham\?\x20Alfred\?\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port30138-TCP:V=7.92%I=7%D=2/5%Time=61FED6ED%P=x86_64-pc-linux-gnu%r(NU
+SF:LL,47C,"\n\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\
+SF:x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0
+SF:\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8
+SF:e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\x
+SF:f0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\
+SF:x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c
+SF:\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\n\x1b\[1;31m\x20\x20\x20\x20\x20\x20__
+SF:____\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x1b\[1;35m\|xxx\|\n\x1b\[1;31m\x20\x20\x20\x20\x20/\
+SF:|_\|\|_\\`\.__\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x1b\[1;35m\|\x20F\x20\|\n\x1b\[1;31m\x20\x20\x20\x20\(\x20
+SF:\x20\x20_\x20\x20\x20\x20_\x20_\\\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x1b\[1;35m\|xxx\|\n\x1b\[1;31m\*\*\*\x20=`-
+SF:\(_\)--\(_\)-'\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x1b\[1;35m\|\x20I\x20\|\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x1b\[1;35m\|xxx\|\n\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x1b\[1;35m\|\x20N\x20\|\n\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x1b\[1;35m\|xxx\|
+SF:\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x1b\[1
+SF:;35m\|\x20I\x20\|\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x1b\[1;35m\|xxx\|\n\x1b\[1;33m\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20_-_-\x20\x20_/\\______\\__\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x1b\[1;35m\|\
+SF:x20S\x20\|\n\x1b\[1;33m\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20_-_-
+SF:__\x20/\x20,-\.\x20-\|-\x20\x20,-\.`-\.\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x1b\[1;35m\|xxx\|\n\x1b\[1;33m\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20_-_-\x20`\(\x20o\x20\)----\(\x2
+SF:0o\x20\)-");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port30271-TCP:V=7.92%I=7%D=2/5%Time=61FED6ED%P=x86_64-pc-linux-gnu%r(NU
+SF:LL,47C,"\n\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\
+SF:x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0
+SF:\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8
+SF:e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\x
+SF:f0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\
+SF:x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c
+SF:\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\n\x1b\[1;31m\x20\x20\x20\x20\x20\x20__
+SF:____\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x1b\[1;35m\|xxx\|\n\x1b\[1;31m\x20\x20\x20\x20\x20/\
+SF:|_\|\|_\\`\.__\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x1b\[1;35m\|\x20F\x20\|\n\x1b\[1;31m\x20\x20\x20\x20\(\x20
+SF:\x20\x20_\x20\x20\x20\x20_\x20_\\\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x1b\[1;35m\|xxx\|\n\x1b\[1;31m\*\*\*\x20=`-
+SF:\(_\)--\(_\)-'\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x1b\[1;35m\|\x20I\x20\|\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x1b\[1;35m\|xxx\|\n\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x1b\[1;35m\|\x20N\x20\|\n\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x1b\[1;35m\|xxx\|
+SF:\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x1b\[1
+SF:;35m\|\x20I\x20\|\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x1b\[1;35m\|xxx\|\n\x1b\[1;33m\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20_-_-\x20\x20_/\\______\\__\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x1b\[1;35m\|\
+SF:x20S\x20\|\n\x1b\[1;33m\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20_-_-
+SF:__\x20/\x20,-\.\x20-\|-\x20\x20,-\.`-\.\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x1b\[1;35m\|xxx\|\n\x1b\[1;33m\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20_-_-\x20`\(\x20o\x20\)----\(\x2
+SF:0o\x20\)-");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port30508-TCP:V=7.92%I=7%D=2/5%Time=61FED6ED%P=x86_64-pc-linux-gnu%r(NU
+SF:LL,47C,"\n\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\
+SF:x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0
+SF:\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8
+SF:e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\x
+SF:f0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\
+SF:x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c
+SF:\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\n\x1b\[1;31m\x20\x20\x20\x20\x20\x20__
+SF:____\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x1b\[1;35m\|xxx\|\n\x1b\[1;31m\x20\x20\x20\x20\x20/\
+SF:|_\|\|_\\`\.__\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x1b\[1;35m\|\x20F\x20\|\n\x1b\[1;31m\x20\x20\x20\x20\(\x20
+SF:\x20\x20_\x20\x20\x20\x20_\x20_\\\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x1b\[1;35m\|xxx\|\n\x1b\[1;31m\*\*\*\x20=`-
+SF:\(_\)--\(_\)-'\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x1b\[1;35m\|\x20I\x20\|\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x1b\[1;35m\|xxx\|\n\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x1b\[1;35m\|\x20N\x20\|\n\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x1b\[1;35m\|xxx\|
+SF:\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x1b\[1
+SF:;35m\|\x20I\x20\|\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x1b\[1;35m\|xxx\|\n\x1b\[1;33m\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20_-_-\x20\x20_/\\______\\__\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x1b\[1;35m\|\
+SF:x20S\x20\|\n\x1b\[1;33m\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20_-_-
+SF:__\x20/\x20,-\.\x20-\|-\x20\x20,-\.`-\.\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x1b\[1;35m\|xxx\|\n\x1b\[1;33m\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20_-_-\x20`\(\x20o\x20\)----\(\x2
+SF:0o\x20\)-");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port31009-TCP:V=7.92%I=7%D=2/5%Time=61FED6ED%P=x86_64-pc-linux-gnu%r(NU
+SF:LL,47C,"\n\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\
+SF:x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0
+SF:\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8
+SF:e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\x
+SF:f0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\
+SF:x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c
+SF:\xf0\x9f\x8e\x8c\xf0\x9f\x8e\x8c\n\x1b\[1;31m\x20\x20\x20\x20\x20\x20__
+SF:____\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x1b\[1;35m\|xxx\|\n\x1b\[1;31m\x20\x20\x20\x20\x20/\
+SF:|_\|\|_\\`\.__\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x1b\[1;35m\|\x20F\x20\|\n\x1b\[1;31m\x20\x20\x20\x20\(\x20
+SF:\x20\x20_\x20\x20\x20\x20_\x20_\\\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x1b\[1;35m\|xxx\|\n\x1b\[1;31m\*\*\*\x20=`-
+SF:\(_\)--\(_\)-'\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x1b\[1;35m\|\x20I\x20\|\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x1b\[1;35m\|xxx\|\n\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x1b\[1;35m\|\x20N\x20\|\n\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x1b\[1;35m\|xxx\|
+SF:\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x1b\[1
+SF:;35m\|\x20I\x20\|\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x1b\[1;35m\|xxx\|\n\x1b\[1;33m\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20_-_-\x20\x20_/\\______\\__\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x1b\[1;35m\|\
+SF:x20S\x20\|\n\x1b\[1;33m\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20_-_-
+SF:__\x20/\x20,-\.\x20-\|-\x20\x20,-\.`-\.\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x1b\[1;35m\|xxx\|\n\x1b\[1;33m\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20_-_-\x20`\(\x20o\x20\)----\(\x2
+SF:0o\x20\)-");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port32110-TCP:V=7.92%I=7%D=2/5%Time=61FED6F8%P=x86_64-pc-linux-gnu%r(NU
+SF:LL,A,"username:\x20")%r(GenericLines,17,"username:\x20's\x20password:\x
+SF:20")%r(GetRequest,25,"username:\x20GET\x20/\x20HTTP/1\.0's\x20password:
+SF:\x20")%r(HTTPOptions,29,"username:\x20OPTIONS\x20/\x20HTTP/1\.0's\x20pa
+SF:ssword:\x20")%r(RTSPRequest,29,"username:\x20OPTIONS\x20/\x20RTSP/1\.0'
+SF:s\x20password:\x20")%r(RPCCheck,A,"username:\x20")%r(DNSVersionBindReqT
+SF:CP,37,"username:\x20\0\x1e\0\x06\x01\0\0\x01\0\0\0\0\0\0\x07version\x04
+SF:bind\0\0\x10\0\x03's\x20password:\x20")%r(DNSStatusRequestTCP,25,"usern
+SF:ame:\x20\0\x0c\0\0\x10\0\0\0\0\0\0\0\0\0's\x20password:\x20")%r(Help,1B
+SF:,"username:\x20HELP's\x20password:\x20")%r(SSLSessionReq,A,"username:\x
+SF:20")%r(TerminalServerCookie,A,"username:\x20")%r(TLSSessionReq,A,"usern
+SF:ame:\x20")%r(Kerberos,A,"username:\x20")%r(SMBProgNeg,A,"username:\x20"
+SF:)%r(X11Probe,23,"username:\x20l\0\x0b\0\0\0\0\0\0\0\0\0's\x20password:\
+SF:x20")%r(FourOhFourRequest,48,"username:\x20GET\x20/nice%20ports%2C/Tri%
+SF:6Eity\.txt%2ebak\x20HTTP/1\.0's\x20password:\x20")%r(LPDString,1F,"user
+SF:name:\x20\x01default's\x20password:\x20")%r(LDAPSearchReq,A,"username:\
+SF:x20")%r(LDAPBindReq,A,"username:\x20")%r(SIPOptions,F2,"username:\x20OP
+SF:TIONS\x20sip:nm\x20SIP/2\.0\r\nVia:\x20SIP/2\.0/TCP\x20nm;branch=foo\r\
+SF:nFrom:\x20<sip:nm@nm>;tag=root\r\nTo:\x20<sip:nm2@nm2>\r\nCall-ID:\x205
+SF:0000\r\nCSeq:\x2042\x20OPTIONS\r\nMax-Forwards:\x2070\r\nContent-Length
+SF::\x200\r\nContact:\x20<sip:nm@nm>\r\nAccept:\x20application/sdp's\x20pa
+SF:ssword:\x20")%r(LANDesk-RC,27,"username:\x20TNMP\x04\0\0\0TNME\0\0\x04\
+SF:0's\x20password:\x20")%r(TerminalServer,A,"username:\x20")%r(NCP,A,"use
+SF:rname:\x20")%r(NotesRPC,53,"username:\x20:\0\0\0/\0\0\0\x02\0\0@\x02\x0
+SF:f\0\x01\0=\x05\0\0\0\0\0\0\0\0\0\0\0\0/\0\0\0\0\0\0\0\0\0@\x1f\0\0\0\0\
+SF:0\0\0\0\0\0\0\0\0\0\0\0\0's\x20password:\x20")%r(JavaRMI,1E,"username:\
+SF:x20JRMI\0\x02K's\x20password:\x20")%r(WMSRequest,A,"username:\x20")%r(o
+SF:racle-tns,A,"username:\x20")%r(ms-sql-s,A,"username:\x20")%r(afp,29,"us
+SF:ername:\x20\0\x03\0\x01\0\0\0\0\0\0\0\x02\0\0\0\0\x0f\0's\x20password:\
+SF:x20")%r(giop,47,"username:\x20GIOP\x01\0\x01\0\$\0\0\0\0\0\0\0\x01\0\0\
+SF:0\x01\0\0\0\x06\0\0\0abcdef\0\0\x04\0\0\0get\0\0\0\0\0's\x20password:\x
+SF:20");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port32264-TCP:V=7.92%I=7%D=2/5%Time=61FED6F8%P=x86_64-pc-linux-gnu%r(NU
+SF:LL,38,"\[1\]:\x20Get\x20encrypted\x20flag\n\[2\]:\x20Encrypt\x20your\x2
+SF:0own\x20message\n>\x20")%r(GenericLines,CC,"\[1\]:\x20Get\x20encrypted\
+SF:x20flag\n\[2\]:\x20Encrypt\x20your\x20own\x20message\n>\x20Invalid\x20m
+SF:enu\x20item\n\[1\]:\x20Get\x20encrypted\x20flag\n\[2\]:\x20Encrypt\x20y
+SF:our\x20own\x20message\n>\x20Invalid\x20menu\x20item\n\[1\]:\x20Get\x20e
+SF:ncrypted\x20flag\n\[2\]:\x20Encrypt\x20your\x20own\x20message\n>\x20")%
+SF:r(GetRequest,CC,"\[1\]:\x20Get\x20encrypted\x20flag\n\[2\]:\x20Encrypt\
+SF:x20your\x20own\x20message\n>\x20Invalid\x20menu\x20item\n\[1\]:\x20Get\
+SF:x20encrypted\x20flag\n\[2\]:\x20Encrypt\x20your\x20own\x20message\n>\x2
+SF:0Invalid\x20menu\x20item\n\[1\]:\x20Get\x20encrypted\x20flag\n\[2\]:\x2
+SF:0Encrypt\x20your\x20own\x20message\n>\x20")%r(HTTPOptions,CC,"\[1\]:\x2
+SF:0Get\x20encrypted\x20flag\n\[2\]:\x20Encrypt\x20your\x20own\x20message\
+SF:n>\x20Invalid\x20menu\x20item\n\[1\]:\x20Get\x20encrypted\x20flag\n\[2\
+SF:]:\x20Encrypt\x20your\x20own\x20message\n>\x20Invalid\x20menu\x20item\n
+SF:\[1\]:\x20Get\x20encrypted\x20flag\n\[2\]:\x20Encrypt\x20your\x20own\x2
+SF:0message\n>\x20")%r(RTSPRequest,CC,"\[1\]:\x20Get\x20encrypted\x20flag\
+SF:n\[2\]:\x20Encrypt\x20your\x20own\x20message\n>\x20Invalid\x20menu\x20i
+SF:tem\n\[1\]:\x20Get\x20encrypted\x20flag\n\[2\]:\x20Encrypt\x20your\x20o
+SF:wn\x20message\n>\x20Invalid\x20menu\x20item\n\[1\]:\x20Get\x20encrypted
+SF:\x20flag\n\[2\]:\x20Encrypt\x20your\x20own\x20message\n>\x20")%r(RPCChe
+SF:ck,38,"\[1\]:\x20Get\x20encrypted\x20flag\n\[2\]:\x20Encrypt\x20your\x2
+SF:0own\x20message\n>\x20")%r(DNSVersionBindReqTCP,38,"\[1\]:\x20Get\x20en
+SF:crypted\x20flag\n\[2\]:\x20Encrypt\x20your\x20own\x20message\n>\x20")%r
+SF:(DNSStatusRequestTCP,38,"\[1\]:\x20Get\x20encrypted\x20flag\n\[2\]:\x20
+SF:Encrypt\x20your\x20own\x20message\n>\x20")%r(Help,82,"\[1\]:\x20Get\x20
+SF:encrypted\x20flag\n\[2\]:\x20Encrypt\x20your\x20own\x20message\n>\x20In
+SF:valid\x20menu\x20item\n\[1\]:\x20Get\x20encrypted\x20flag\n\[2\]:\x20En
+SF:crypt\x20your\x20own\x20message\n>\x20")%r(SSLSessionReq,82,"\[1\]:\x20
+SF:Get\x20encrypted\x20flag\n\[2\]:\x20Encrypt\x20your\x20own\x20message\n
+SF:>\x20Invalid\x20menu\x20item\n\[1\]:\x20Get\x20encrypted\x20flag\n\[2\]
+SF::\x20Encrypt\x20your\x20own\x20message\n>\x20");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port32560-TCP:V=7.92%I=7%D=2/5%Time=61FED6F8%P=x86_64-pc-linux-gnu%r(NU
+SF:LL,28,"Welcome\x20to\x20HTB!\nPlease\x20enter\x20your\x20name:\x20")%r(
+SF:GenericLines,12C,"Welcome\x20to\x20HTB!\nPlease\x20enter\x20your\x20nam
+SF:e:\x20Hello,\x20\r\nSorry!\x20You\x20aren't\x201337\x20enough\x20:\(\nP
+SF:lease\x20come\x20back\x20later\n------------------------\nWelcome\x20to
+SF:\x20HTB!\nPlease\x20enter\x20your\x20name:\x20Hello,\x20\r\nSorry!\x20Y
+SF:ou\x20aren't\x201337\x20enough\x20:\(\nPlease\x20come\x20back\x20later\
+SF:n------------------------\nWelcome\x20to\x20HTB!\nPlease\x20enter\x20yo
+SF:ur\x20name:\x20")%r(GetRequest,13A,"Welcome\x20to\x20HTB!\nPlease\x20en
+SF:ter\x20your\x20name:\x20Hello,\x20GET\x20/\x20HTTP/1\.0\r\nSorry!\x20Yo
+SF:u\x20aren't\x201337\x20enough\x20:\(\nPlease\x20come\x20back\x20later\n
+SF:------------------------\nWelcome\x20to\x20HTB!\nPlease\x20enter\x20you
+SF:r\x20name:\x20Hello,\x20\r\nSorry!\x20You\x20aren't\x201337\x20enough\x
+SF:20:\(\nPlease\x20come\x20back\x20later\n------------------------\nWelco
+SF:me\x20to\x20HTB!\nPlease\x20enter\x20your\x20name:\x20")%r(HTTPOptions,
+SF:13E,"Welcome\x20to\x20HTB!\nPlease\x20enter\x20your\x20name:\x20Hello,\
+SF:x20OPTIONS\x20/\x20HTTP/1\.0\r\nSorry!\x20You\x20aren't\x201337\x20enou
+SF:gh\x20:\(\nPlease\x20come\x20back\x20later\n------------------------\nW
+SF:elcome\x20to\x20HTB!\nPlease\x20enter\x20your\x20name:\x20Hello,\x20\r\
+SF:nSorry!\x20You\x20aren't\x201337\x20enough\x20:\(\nPlease\x20come\x20ba
+SF:ck\x20later\n------------------------\nWelcome\x20to\x20HTB!\nPlease\x2
+SF:0enter\x20your\x20name:\x20")%r(RTSPRequest,13E,"Welcome\x20to\x20HTB!\
+SF:nPlease\x20enter\x20your\x20name:\x20Hello,\x20OPTIONS\x20/\x20RTSP/1\.
+SF:0\r\nSorry!\x20You\x20aren't\x201337\x20enough\x20:\(\nPlease\x20come\x
+SF:20back\x20later\n------------------------\nWelcome\x20to\x20HTB!\nPleas
+SF:e\x20enter\x20your\x20name:\x20Hello,\x20\r\nSorry!\x20You\x20aren't\x2
+SF:01337\x20enough\x20:\(\nPlease\x20come\x20back\x20later\n--------------
+SF:----------\nWelcome\x20to\x20HTB!\nPlease\x20enter\x20your\x20name:\x20
+SF:")%r(RPCCheck,28,"Welcome\x20to\x20HTB!\nPlease\x20enter\x20your\x20nam
+SF:e:\x20")%r(DNSVersionBindReqTCP,28,"Welcome\x20to\x20HTB!\nPlease\x20en
+SF:ter\x20your\x20name:\x20");
+Service Info: Host: hwtheneedle-922201-6d5ccdf4cc-h59z6; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Feb  5 20:01:28 2022 -- 1 IP address (1 host up) scanned in 177.68 seconds
