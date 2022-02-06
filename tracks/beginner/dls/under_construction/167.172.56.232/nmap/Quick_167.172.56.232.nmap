@@ -1,9 +1,0 @@
-# Nmap 7.92 scan initiated Sat Feb  5 19:38:57 2022 as: nmap -Pn -T4 --max-retries 1 --max-scan-delay 20 --defeat-rst-ratelimit --open -oN nmap/Quick_167.172.56.232.nmap 167.172.56.232
-Nmap scan report for 167.172.56.232
-Host is up (2.2s latency).
-Not shown: 917 filtered tcp ports (no-response), 82 closed tcp ports (reset)
-Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
-PORT      STATE SERVICE
-31337/tcp open  Elite
-
-# Nmap done at Sat Feb  5 19:40:14 2022 -- 1 IP address (1 host up) scanned in 76.97 seconds

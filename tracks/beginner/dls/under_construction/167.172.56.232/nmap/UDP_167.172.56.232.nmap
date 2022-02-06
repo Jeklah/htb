@@ -1,7 +1,0 @@
-# Nmap 7.92 scan initiated Sat Feb  5 19:40:21 2022 as: nmap -Pn -sU --max-retries 1 --open -oN nmap/UDP_167.172.56.232.nmap 167.172.56.232
-Nmap scan report for 167.172.56.232
-Host is up.
-All 1000 scanned ports on 167.172.56.232 are in ignored states.
-Not shown: 1000 open|filtered udp ports (no-response)
-
-# Nmap done at Sat Feb  5 19:43:43 2022 -- 1 IP address (1 host up) scanned in 201.40 seconds
