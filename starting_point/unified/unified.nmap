@@ -1,0 +1,9 @@
+# Nmap 7.92 scan initiated Wed Feb  9 00:16:25 2022 as: nmap -sCV -v -oA unified -Pn 10.129.96.149
+Nmap scan report for 10.129.96.149
+Host is up.
+All 1000 scanned ports on 10.129.96.149 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Feb  9 00:19:47 2022 -- 1 IP address (1 host up) scanned in 201.69 seconds
