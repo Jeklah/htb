@@ -1,0 +1,14 @@
+[0;32m---------------------Recon Recommendations----------------------
+[0m
+[0m
+[0;33mWeb Servers Recon:
+[0m
+gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt  -t 30 -e -k -x .html,.php -u http://10.129.96.92:8080 -o recon/gobuster_10.129.96.92_8080.txt
+nikto -host 10.129.96.92:8080 | tee recon/nikto_10.129.96.92_8080.txt
+
+gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt  -t 30 -e -k -x .html,.php -u http://10.129.96.92:|_http-open-proxy: Proxy might be redirecting requests -o recon/gobuster_10.129.96.92_|_http-open-proxy: Proxy might be redirecting requests.txt
+nikto -host 10.129.96.92:|_http-open-proxy: Proxy might be redirecting requests | tee recon/nikto_10.129.96.92_|_http-open-proxy: Proxy might be redirecting requests.txt
+
+
+
+
