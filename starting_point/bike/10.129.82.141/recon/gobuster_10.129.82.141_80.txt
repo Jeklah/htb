@@ -1,0 +1,3 @@
+http://10.129.82.141:80/images               (Status: 301) [Size: 179] [--> /images/]
+http://10.129.82.141:80/css                  (Status: 301) [Size: 173] [--> /css/]
+http://10.129.82.141:80/js                   (Status: 301) [Size: 171] [--> /js/]
