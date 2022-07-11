@@ -1,0 +1,3 @@
+sudo responder -I tun0 
+
+use the above to wait for a response then request a non existant file from your ip to get a hash from the admin
