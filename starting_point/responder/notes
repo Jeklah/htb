@@ -1,3 +1,5 @@
 sudo responder -I tun0 
 
 use the above to wait for a response then request a non existant file from your ip to get a hash from the admin
+use local file inclusion to do the request.
+port scan to see if port 5985 is open. that is the indication that this vuln is possibly open.
