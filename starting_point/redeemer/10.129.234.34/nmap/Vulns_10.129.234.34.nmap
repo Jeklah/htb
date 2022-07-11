@@ -1,0 +1,30 @@
+# Nmap 7.92 scan initiated Mon Jun 20 20:58:06 2022 as: nmap -Pn -sV --script vuln -p6379, -oN nmap/Vulns_10.129.234.34.nmap 10.129.234.34
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Nmap scan report for 10.129.234.34
+Host is up (0.034s latency).
+
+PORT     STATE SERVICE VERSION
+6379/tcp open  redis   Redis key-value store 5.0.7
+| vulners: 
+|   cpe:/a:redislabs:redis:5.0.7: 
+|     	CVE-2021-32762	9.0	https://vulners.com/cve/CVE-2021-32762
+|     	CVE-2021-32626	6.5	https://vulners.com/cve/CVE-2021-32626
+|     	CVE-2021-21309	6.5	https://vulners.com/cve/CVE-2021-21309
+|     	CVE-2021-41099	6.0	https://vulners.com/cve/CVE-2021-41099
+|     	CVE-2021-32761	6.0	https://vulners.com/cve/CVE-2021-32761
+|     	CVE-2021-32687	6.0	https://vulners.com/cve/CVE-2021-32687
+|     	CVE-2021-32628	6.0	https://vulners.com/cve/CVE-2021-32628
+|     	CVE-2021-32627	6.0	https://vulners.com/cve/CVE-2021-32627
+|     	CVE-2021-3470	5.0	https://vulners.com/cve/CVE-2021-3470
+|     	CVE-2021-32675	5.0	https://vulners.com/cve/CVE-2021-32675
+|     	CVE-2020-21468	5.0	https://vulners.com/cve/CVE-2020-21468
+|     	CVE-2021-32672	4.0	https://vulners.com/cve/CVE-2021-32672
+|_    	CVE-2020-14147	4.0	https://vulners.com/cve/CVE-2020-14147
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Jun 20 20:58:47 2022 -- 1 IP address (1 host up) scanned in 40.74 seconds
