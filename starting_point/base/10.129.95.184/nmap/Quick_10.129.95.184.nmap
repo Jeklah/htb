@@ -1,0 +1,9 @@
+# Nmap 7.92 scan initiated Tue Jul 12 00:04:58 2022 as: nmap -Pn -T4 --max-retries 1 --max-scan-delay 20 --defeat-rst-ratelimit --open -oN nmap/Quick_10.129.95.184.nmap 10.129.95.184
+Nmap scan report for 10.129.95.184
+Host is up (0.022s latency).
+Not shown: 998 closed tcp ports (conn-refused)
+PORT   STATE SERVICE
+22/tcp open  ssh
+80/tcp open  http
+
+# Nmap done at Tue Jul 12 00:04:58 2022 -- 1 IP address (1 host up) scanned in 0.39 seconds
